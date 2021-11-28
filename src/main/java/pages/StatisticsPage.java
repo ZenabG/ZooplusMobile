@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.logging.Logger;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,11 +19,14 @@ public class StatisticsPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String getActiveTasksStatictics() {
+	public String getActiveTasksStatictics(Logger log) {
+		
+		log.info(String.format("Active tasks statistics is :", activeTasksText.getText()));
 		return activeTasksText.getText();
 	}
 	
-	public String getCompletedTasksStatistics() {
+	public String getCompletedTasksStatistics(Logger log) {
+		log.info(String.format("Completed tasks statistics is :", completedTasksText.getText()));
 		return completedTasksText.getText();
 	}
 

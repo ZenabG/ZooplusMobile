@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.logging.Logger;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,16 +22,22 @@ public class AddTaskPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void addTaskTitle(String title) {
+	public void addTaskTitle(String title, Logger log) {
 		addTaskTitle.sendKeys(title);
+		
+		log.info(String.format("Added task title as ", title));
 	}
 	
-	public void addTaskDescription(String description) {
+	public void addTaskDescription(String description, Logger log) {
 		addTaskDescription.sendKeys(description);
+		
+		log.info(String.format("Added task description as ", description));
 	}
 	
-	public void clickSaveTask() {
+	public void clickSaveTask(Logger log) {
 		saveTaskButton.click();
+		
+		log.info("Task is saved");
 	}
 
 }

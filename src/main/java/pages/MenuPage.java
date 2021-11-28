@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.logging.Logger;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,12 +19,16 @@ public class MenuPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void goToStatisticsTab() {
+	public void goToStatisticsTab(Logger log) {
 		statisticsTab.click();
+		
+		log.info("Go to statistics page");
 	}
 	
-	public void goToTasksListTab() {
+	public void goToTasksListTab(Logger log) {
 		tasksListTab.click();
+		
+		log.info("Go to tasks list page");
 	}
 
 }
