@@ -25,13 +25,13 @@ public class AddTaskPage {
 	public void addTaskTitle(String title, Logger log) {
 		addTaskTitle.sendKeys(title);
 		
-		log.info(String.format("Added task title as ", title));
+		log.info(String.format("Added task title as %s", title));
 	}
 	
 	public void addTaskDescription(String description, Logger log) {
 		addTaskDescription.sendKeys(description);
 		
-		log.info(String.format("Added task description as ", description));
+		log.info(String.format("Added task description as %s", description));
 	}
 	
 	public void clickSaveTask(Logger log) {
