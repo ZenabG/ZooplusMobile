@@ -25,6 +25,8 @@ The project follows **Page object model** mechanism with **Page Factory**. **Tes
         
    2. **functionalTests :** It consists of TestNG class with the TODO app UI test.
 
+* **Appium_server_logs :** This folder has the appium server logs file generated after each test run
+
 ## Test reports 
   **Maven reports :** Path in the project `/target/surefire-reports/emailable-report.html`
     These reports are generated as part of maven test run and provides good details of each test execution. 
